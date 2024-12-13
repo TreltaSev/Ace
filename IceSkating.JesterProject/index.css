@@ -1,8 +1,10 @@
+/* Root Variables */
 :root {
   --primary: #4c90ee;
   --background: #262b32;
 }
 
+/* Fonts */
 @font-face {
   font-family: "Lato";
   font-style: normal;
@@ -10,20 +12,24 @@
   src: url("assets/fonts/Lato.ttf");
 }
 
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;    
-}
+/* General Reset */
 body, html {
   height: 100%;
   margin: 0;
 }
 
+/* Background */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Body */
 body {
   /* Structure */
   display: flex;
@@ -40,24 +46,26 @@ body {
   color: white;
 }
 
-/* Hyperlink Color Requirement */
+/* Hyperlinks */
 a {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
-
+/* Horizontal Rule */
 hr {
-  width: 100%;
+  width: 60%;
   height: 10px;
-  background: rgba( 0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   border: none;
   border-radius: 10px;
 }
 
+/* Filler */
 .filler {
   height: 100%;
 }
 
+/* Headings */
 h1 {
   align-self: center;
 }
@@ -66,35 +74,54 @@ h2 {
   color: #94c1ff;
 }
 
+/* Sections */
 .section {
-  
-  /**/
   display: flex;
   flex-direction: column;
-  gap: 5px;
-
+  gap: 10px;
+  width: 60%;
+  align-self: center;
   box-sizing: border-box;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 10px;;
-
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
 }
 
-.section h2 {
-  margin: 0;
+.section.slim {
+  padding: 0;
+}
+
+.section.slim h1 {
+  color: var(--primary);
+}
+
+.section {
+  & h2, h3, h4 {
+    margin: 0;
+    color: var(--primary)
+  }
+
+  & p {
+    margin: 0;
+  }
 }
 
 .section ol {
   margin: 0;
 }
 
-.section hr {
+.section h2 + hr {
   background: var(--primary);
   margin: 0;
+  width: 100%;
   margin-bottom: 5px;
-
 }
 
+.section article {
+  gap: 10px;
+}
+
+/* Buttons */
 button {
   display: flex;
   flex-direction: column;
@@ -114,3 +141,33 @@ button span {
   font-size: 1.5em;
 }
 
+/* Lists */
+ul {
+  list-style-type: square;
+  margin-top: 5px;
+}
+
+ul > li::marker {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Floats */
+.fl {
+  float: left;
+}
+
+/* Images */
+
+article img {
+  border-radius: 10px;
+}
+
+article img.fl {
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+article img.small {
+  width: 140px;
+}
