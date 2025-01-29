@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* -=-=-=-=-=-=- Colors -=-=-=-=-=-=- */
+@theme {
+    --color-primary-100: #d9f3fc;
+    --color-primary-200: #b3e6f9;
+    --color-primary-300: #8edaf5;
+    --color-primary-400: #68cdf2;
+    --color-primary-500: #42c1ef;
+    --color-primary-600: #359abf;
+    --color-primary-700: #28748f;
+    --color-primary-800: #1a4d60;
+    --color-primary-900: #0d2730;
+    --color-primary-950: #13242B;
+}
+
+/* -=-=-=-=-=-=- Base -=-=-=-=-=-=- */
+@layer base {
+    span, th, td {
+        @apply text-gray-900 dark:text-white
+    }
+}

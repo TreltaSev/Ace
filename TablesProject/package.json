@@ -33,7 +33,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.0",
+    "clsx": "^2.1.1",
     "tablesproject": "file:",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss": "^4.0.0"
   }
 }

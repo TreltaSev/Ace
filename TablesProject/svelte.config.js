@@ -14,6 +14,7 @@ const config = {
 		adapter: adapter(),
 
 		alias: {
+			"@lib": "src/lib",
 			"@ui": "src/lib/ui"
 		}
 	}

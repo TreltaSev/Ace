@@ -1,1 +1,3 @@
-export { default as Table } from "./Table.svelte"
+export * as Button from "./button"
+export * as Flex from "./flex"
+export * as Table from "./table"
